@@ -9,7 +9,7 @@ function App() {
 
   async function registerUser(event){
     event.preventDefault()
-    const repsonse = await fetch('http://localhost:1337/api/register', {
+    const response = await fetch('http://localhost:1337/api/register', {
     method: 'POST',
     headers:{
       'Content-type': 'application/json'
@@ -21,7 +21,7 @@ function App() {
       }),
     })
 
-    const data = await Response.json()
+    const data = await response.json()
     console.log(data)
   }
 
